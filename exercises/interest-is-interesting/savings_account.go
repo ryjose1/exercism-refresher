@@ -20,7 +20,7 @@ func InterestRate(balance float64) float32 {
 
 // InterestRate calculates the interest for the provided balance.
 func Interest(balance float64) float64 {
-	return math.Copysign(balance*float64(InterestRate(balance))/100.0, balance)
+	return math.Abs(balance) * float64(InterestRate(balance)) / 100.0
 }
 
 // AnnualBalanceUpdate calculates the annual balance update, taking into account the interest rate.
