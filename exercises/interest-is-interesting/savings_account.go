@@ -30,11 +30,11 @@ func AnnualBalanceUpdate(balance float64) float64 {
 
 // YearsBeforeDesiredBalance calculates the minimum number of years required to reach the desired balance:
 func YearsBeforeDesiredBalance(balance, targetBalance float64) (years int) {
-	if math.Signbit(balance) != math.Signbit(targetBalance) {
-		panic("Balance will never reach target due to differing signs")
+	if Interest(balance) < 0 && balance < targetBalance {
+		panic("Balance will never reach target due to negative growth")
 	}
 
-	for math.Abs(balance) < math.Abs(targetBalance) {
+	for balance < targetBalance {
 		balance = AnnualBalanceUpdate(balance)
 		years += 1
 	}
