@@ -8,6 +8,7 @@
         <module>lasagna</module>
         <module>annalyns-infiltration</module>
         <module>bird-watcher</module>
+        <module>blackjack</module>
     </modules>
     <dependencies>
         <dependency>
