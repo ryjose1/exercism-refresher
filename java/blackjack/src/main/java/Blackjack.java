@@ -1,46 +1,41 @@
+import java.util.HashMap;
+
 public class Blackjack {
 
-  public int parseCard(String card) {
-    int val;
-    switch (card) {
-      case "ace":
-        val = 11;
-        break;
-      case "two":
-        val = 2;
-        break;
-      case "three":
-        val = 3;
-        break;
-      case "four":
-        val = 4;
-        break;
-      case "five":
-        val = 5;
-        break;
-      case "six":
-        val = 6;
-        break;
-      case "seven":
-        val = 7;
-        break;
-      case "eight":
-        val = 8;
-        break;
-      case "nine":
-        val = 9;
-        break;
-      case "ten":
-      case "jack":
-      case "queen":
-      case "king":
-        val = 10;
-        break;
-      default:
-        val = 0;
-        break;
+  private enum Option {
+    STAND("S"),
+    HIT("H"),
+    SPLIT("P"),
+    AUTO_WIN("W");
+
+    private final String code;
+
+    Option(String code) {
+      this.code = code;
     }
-    return val;
+  }
+
+  public int parseCard(String card) {
+    HashMap<String, Integer> map = new HashMap<>();
+    map.put("ace", 11);
+    map.put("two", 2);
+    map.put("three", 3);
+    map.put("four", 4);
+    map.put("five", 5);
+    map.put("six", 6);
+    map.put("seven", 7);
+    map.put("eight", 8);
+    map.put("nine", 9);
+    map.put("ten", 10);
+    map.put("jack", 10);
+    map.put("queen", 10);
+    map.put("king", 10);
+
+    if (map.containsKey(card)) {
+      return map.get(card);
+    } else {
+      return 0;
+    }
   }
 
   public boolean isBlackjack(String card1, String card2) {
@@ -54,20 +49,20 @@ public class Blackjack {
 
   public String largeHand(boolean isBlackjack, int dealerScore) {
     if (!isBlackjack) {
-      return "P";
+      return Option.SPLIT.code;
     }
     if (dealerScore < 10) {
-      return "W";
+      return Option.AUTO_WIN.code;
     } else {
-      return "S";
+      return Option.STAND.code;
     }
   }
 
   public String smallHand(int handScore, int dealerScore) {
     if (handScore >= 17 || (handScore >= 12 && dealerScore < 7)) {
-      return "S";
+      return Option.STAND.code;
     } else {
-      return "H";
+      return Option.HIT.code;
     }
   }
 
