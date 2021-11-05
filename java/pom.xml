@@ -13,6 +13,7 @@
         <module>karls-languages</module>
         <module>squeaky-clean</module>
         <module>cars-assemble</module>
+        <module>elons-toy-car</module>
     </modules>
     <dependencies>
         <dependency>
