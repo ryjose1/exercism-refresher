@@ -11,6 +11,7 @@
         <module>blackjack</module>
         <module>log-levels</module>
         <module>karls-languages</module>
+        <module>squeaky-clean</module>
     </modules>
     <dependencies>
         <dependency>
