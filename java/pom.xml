@@ -10,6 +10,7 @@
         <module>bird-watcher</module>
         <module>blackjack</module>
         <module>log-levels</module>
+        <module>karls-languages</module>
     </modules>
     <dependencies>
         <dependency>
