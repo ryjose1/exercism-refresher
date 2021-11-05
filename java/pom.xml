@@ -9,6 +9,7 @@
         <module>annalyns-infiltration</module>
         <module>bird-watcher</module>
         <module>blackjack</module>
+        <module>log-levels</module>
     </modules>
     <dependencies>
         <dependency>
