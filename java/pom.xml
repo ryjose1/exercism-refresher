@@ -14,6 +14,11 @@
         <module>squeaky-clean</module>
         <module>cars-assemble</module>
         <module>elons-toy-car</module>
+        <module>football-match-reports</module>
+        <module>need-for-speed</module>
+        <module>remote-control-competition</module>
+        <module>salary-calculator</module>
+        <module>wizards-and-warriors</module>
     </modules>
     <dependencies>
         <dependency>
