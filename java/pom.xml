@@ -12,6 +12,7 @@
         <module>log-levels</module>
         <module>karls-languages</module>
         <module>squeaky-clean</module>
+        <module>cars-assemble</module>
     </modules>
     <dependencies>
         <dependency>
