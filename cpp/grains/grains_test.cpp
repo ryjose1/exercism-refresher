@@ -9,7 +9,7 @@ TEST_CASE("square_1")
 {
     REQUIRE(1ULL == grains::square(1));
 }
-
+#define EXERCISM_RUN_ALL_TESTS
 #if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("square_2")
 {
