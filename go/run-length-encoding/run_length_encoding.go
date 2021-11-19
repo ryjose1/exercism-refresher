@@ -15,7 +15,7 @@ func GetNumPrefix(input string) (prefix string, suffix string) {
 		if i+1 > len(input) {
 			panic("Hit end of string without encountering a letter")
 		}
-		strconv.
+
 		if _, err := strconv.Atoi(string(char)); err != nil {
 			prefix = string(input[:i+1])
 			suffix = string(input[i+1:])
